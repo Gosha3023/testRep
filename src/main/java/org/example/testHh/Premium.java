@@ -76,5 +76,6 @@ public class Premium {
 
     public static int increasePremium(int premium, List<Integer> list) {
         return premium + list.stream().filter(p -> p > premium).map(x -> (x % premium) / (x / premium)).min(Integer::compare).get();
+        //mod file
     }
 }
